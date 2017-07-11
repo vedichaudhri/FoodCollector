@@ -13,6 +13,8 @@
 		479701FF1F1572B800EABF33 /* FoodCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 479701FD1F1572B800EABF33 /* FoodCollector.xcdatamodeld */; };
 		479702011F1572B800EABF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479702001F1572B800EABF33 /* Assets.xcassets */; };
 		479702041F1572B800EABF33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479702021F1572B800EABF33 /* LaunchScreen.storyboard */; };
+		4797020C1F1586CB00EABF33 /* food_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4797020B1F1586CB00EABF33 /* food_img.jpg */; };
+		4797020E1F15882000EABF33 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4797020D1F15882000EABF33 /* FoodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		479702001F1572B800EABF33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479702031F1572B800EABF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		479702051F1572B800EABF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4797020B1F1586CB00EABF33 /* food_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food_img.jpg; sourceTree = "<group>"; };
+		4797020D1F15882000EABF33 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		479701F51F1572B800EABF33 /* FoodCollector */ = {
 			isa = PBXGroup;
 			children = (
+				4797020B1F1586CB00EABF33 /* food_img.jpg */,
 				479701F61F1572B800EABF33 /* AppDelegate.swift */,
 				479701F81F1572B800EABF33 /* ViewController.swift */,
 				479701FA1F1572B800EABF33 /* Main.storyboard */,
+				4797020D1F15882000EABF33 /* FoodViewController.swift */,
 				479702001F1572B800EABF33 /* Assets.xcassets */,
 				479702021F1572B800EABF33 /* LaunchScreen.storyboard */,
 				479702051F1572B800EABF33 /* Info.plist */,
@@ -129,6 +135,7 @@
 				479702041F1572B800EABF33 /* LaunchScreen.storyboard in Resources */,
 				479702011F1572B800EABF33 /* Assets.xcassets in Resources */,
 				479701FC1F1572B800EABF33 /* Main.storyboard in Resources */,
+				4797020C1F1586CB00EABF33 /* food_img.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 			files = (
 				479701F91F1572B800EABF33 /* ViewController.swift in Sources */,
 				479701FF1F1572B800EABF33 /* FoodCollector.xcdatamodeld in Sources */,
+				4797020E1F15882000EABF33 /* FoodViewController.swift in Sources */,
 				479701F71F1572B800EABF33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
