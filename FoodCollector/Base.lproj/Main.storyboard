@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="892" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--Food View Controller-->
         <scene sceneID="FFE-nu-QZT">
             <objects>
-                <viewController id="iIv-AV-slx" sceneMemberID="viewController">
+                <viewController id="iIv-AV-slx" customClass="FoodViewController" customModule="FoodCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="42C-Ja-5AL"/>
                         <viewControllerLayoutGuide type="bottom" id="G85-Qa-tWV"/>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-7D-OQx">
                                 <rect key="frame" x="172" y="343" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="iIv-AV-slx" eventType="touchUpInside" id="7kc-hf-cEh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,14 +81,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="5lp-qO-kST">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="6jl-Kc-gXH"/>
-                            <barButtonItem title="Photos" id="Jeb-on-DMa"/>
+                            <barButtonItem systemItem="camera" id="6jl-Kc-gXH">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="iIv-AV-slx" id="Qws-FZ-K2Z"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="Jeb-on-DMa">
+                                <connections>
+                                    <action selector="photosTapped:" destination="iIv-AV-slx" id="b6J-Mj-GYn"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="foodImageView" destination="Jaf-tg-BiE" id="PGp-XG-aoA"/>
+                        <outlet property="nameTextField" destination="9A7-Pw-hvn" id="c2T-qy-b56"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gd-WA-8de" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="156"/>
+            <point key="canvasLocation" x="1756" y="155.17241379310346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y3V-qO-6S7">
