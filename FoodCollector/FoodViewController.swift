@@ -57,15 +57,36 @@ class FoodViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBAction func addTapped(_ sender: Any) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        if game != nil {
+            game!.title = nameTextField.text
+            game!.image = UIImagePNGRepresentation(foodImageView.image!)! as NSData
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let game = Game(context: context)
+            game.title = nameTextField.text
+            game.image = UIImagePNGRepresentation(foodImageView.image!)! as NSData
+        }
         
-        let game = Game(context: context)
-        game.title = nameTextField.text
-        game.image = UIImagePNGRepresentation(foodImageView.image!)! as NSData
+        
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         navigationController!.popViewController(animated: true)
         
     }
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(game!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+
+        
+    }
+    
+    
+    
+    
 }
