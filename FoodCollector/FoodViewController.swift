@@ -10,17 +10,29 @@ import UIKit
 
 class FoodViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var addUpdateButton: UIButton!
     @IBOutlet weak var foodImageView: UIImageView!
     
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     var imagePicker = UIImagePickerController()
+    var game: Game? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         imagePicker.delegate = self
+        
+        if game != nil {
+            foodImageView.image = UIImage(data: game!.image as! Data)
+            nameTextField.text = game!.title
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true;
+        }
     }
 
     @IBAction func photosTapped(_ sender: Any) {

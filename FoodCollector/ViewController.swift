@@ -44,6 +44,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let food = games[indexPath.row]
+        performSegue(withIdentifier: "gameSegue", sender: food)
+        
+    }
+    
+    //pass whatever is inside the sender to the next view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! FoodViewController
+        nextVC.game = sender as? Game
+        
+    }
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //        // Dispose of any resources that can be recreated.
